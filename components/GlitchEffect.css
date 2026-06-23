@@ -1,0 +1,122 @@
+.glitch-main {
+  position: relative;
+  display: inline-block;
+    line-height: 1.1;
+
+      isolation: isolate;
+
+  --primary: #00f0ff;
+  --shadow-primary: #ff00ff;
+  --shadow-secondary-hue: 60;
+  --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --border: 2px;
+  --shimmy-distance: 2;
+
+  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 0 95%);
+  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 0 100%);
+  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 0 54%);
+  --clip-four: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-five: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 0 85%);
+  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 0 80%);
+}
+
+.glitch-space {
+  position: absolute;
+  inset: 0;
+  color: white;
+
+  background: transparent;
+
+  text-shadow:
+    2px 2px var(--shadow-primary),
+    -2px -2px var(--shadow-secondary);
+
+  clip-path: var(--clip);
+  animation: glitch-action 2.5s infinite;
+
+  pointer-events: none;
+
+  
+ font-size: inherit;
+line-height: inherit;
+  display: block;
+
+
+}
+
+
+.glitch-active .glitch-space {
+  /* animation: glitch-action 0.5s; */
+    animation-duration: 0.45s;
+}
+
+
+ @keyframes glitch-action {
+    0% {
+      clip-path: var(--clip-one);
+    }
+
+    2%, 8% {
+      clip-path: var(--clip-two);
+      transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+    }
+
+    6% {
+      clip-path: var(--clip-two);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+
+    9% {
+      transform: translate(0, 0);
+    }
+
+    10% {
+      clip-path: var(--clip-three);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+
+    13% {
+      transform: translate(0, 0);
+    }
+
+    14%, 21% {
+      clip-path: var(--clip-four);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+
+    25% {
+      clip-path: var(--clip-five);
+    }
+
+    30% {
+      clip-path: var(--clip-five);
+    }
+
+    35%, 45% {
+      clip-path: var(--clip-six);
+      transform: translate(calc(var(--shimmy-distance) * -1%));
+    }
+
+    40% {
+      transform: translate(calc(var(--shimmy-distance) * 1%));
+    }
+
+    50% {
+      transform: translate(0, 0);
+    }
+
+    55% {
+      clip-path: var(--clip-seven);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+
+    60% {
+      transform: translate(0, 0);
+    }
+
+    31%, 61%, 100% {
+      clip-path: var(--clip-four);
+    }
+}

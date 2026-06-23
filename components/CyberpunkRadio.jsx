@@ -6,7 +6,7 @@ const CyberpunkRadio = () => {
       <div className="container">
         <div className="radio-wrapper">
           <input type="radio" id="value-1" name="btn" className="input" />
-          <div className="btn font-cynatar">
+          <div className="btn font-goblin">
             <span aria-hidden>_</span>Cyber
             <span aria-hidden className="btn__glitch">_Cyber🦾</span>
             <label className="number">r1</label>
@@ -14,7 +14,7 @@ const CyberpunkRadio = () => {
         </div>
         <div className="radio-wrapper">
           <input type="radio" defaultChecked="true" id="value-2" name="btn" className="input" />
-          <div className="btn font-cynatar">
+          <div className="btn font-sefa">
             _Radio<span aria-hidden>_</span>
             <span aria-hidden className="btn__glitch">_R_a_d_i_o_</span>
             <label className="number">r2</label>
