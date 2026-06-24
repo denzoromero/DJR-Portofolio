@@ -31,19 +31,8 @@ export default function HeroText() {
   return (
     <div>
       <h3
-        className={`text-yellow-300 text-6xl tracking-widest font-orbitron glitch-main  ${
-          isGlitching ? "glitch-active" : ""
-        }`}
-
-           style={{
-                            textShadow: `
-                            0 0 3px #00f0ff,
-                            0 0 6px #00f0ff,
-                            0 0 12px #00f0ff
-                            `
-                        }}
-
-      >
+        className={`text-yellow-300 text-5xl tracking-widest font-orbitron cyberpunk glitch-main  
+        ${isGlitching ? "glitch-active" : ""}`}>
         {texts[index]}
         <span className="glitch-space">{texts[index]}</span>
       </h3>

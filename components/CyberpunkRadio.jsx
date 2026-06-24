@@ -1,31 +1,73 @@
+import { useEffect, useState } from "react";
 import styled from 'styled-components';
 
 const CyberpunkRadio = () => {
+
+const [active, setActive] = useState("home");
+const sections = ["home", "about", "projects", "contact"];
+
+const scrollToSection = (id) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
+useEffect(() => {
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    },
+    {
+      threshold: 0.6, // adjust sensitivity
+    }
+  );
+
+  sections.forEach((sec) => observer.observe(sec));
+
+  return () => observer.disconnect();
+}, []);
+
+
+
   return (
     <StyledWrapper>
       <div className="container">
         <div className="radio-wrapper">
-          <input type="radio" id="value-1" name="btn" className="input" />
-          <div className="btn font-goblin">
-            <span aria-hidden>_</span>Cyber
-            <span aria-hidden className="btn__glitch">_Cyber🦾</span>
+          <input type="radio" id="value-1" name="btn" className="input" checked={active === "home"} onChange={() => scrollToSection("home")} />
+          <div className="btn font-sefa">
+            <span aria-hidden>_</span>Home
+            <span aria-hidden className="btn__glitch">_Home</span>
             <label className="number">r1</label>
           </div>
         </div>
         <div className="radio-wrapper">
-          <input type="radio" defaultChecked="true" id="value-2" name="btn" className="input" />
+          <input type="radio" id="value-2" name="btn" className="input" checked={active === "about"} onChange={() => scrollToSection("about")} />
           <div className="btn font-sefa">
-            _Radio<span aria-hidden>_</span>
-            <span aria-hidden className="btn__glitch">_R_a_d_i_o_</span>
+            _About<span aria-hidden>_</span>
+            <span aria-hidden className="btn__glitch">_A_b_o_u_t_</span>
             <label className="number">r2</label>
           </div>
         </div>
         <div className="radio-wrapper">
-          <input type="radio" id="value-3" name="btn" className="input" />
-          <div className="btn font-cynatar">
-            Buttons<span aria-hidden />
-            <span aria-hidden className="btn__glitch">Buttons_</span>
+          <input type="radio" id="value-3" name="btn" className="input" checked={active === "projects"} onChange={() => scrollToSection("projects")} />
+          <div className="btn font-sefa">
+            Projects<span aria-hidden/>
+            <span aria-hidden className="btn__glitch">_Projects_</span>
             <label className="number">r3</label>
+          </div> 
+        </div>
+        <div className="radio-wrapper">
+          <input type="radio" id="value-4" name="btn" className="input" checked={active === "contact"} onChange={() => scrollToSection("contact")} />
+          <div className="btn font-sefa">
+            _Contact<span aria-hidden>_</span>
+            <span aria-hidden className="btn__glitch">Contact_</span>
+            <label className="number">r4</label>
           </div> 
         </div>
       </div>
@@ -42,7 +84,7 @@ const StyledWrapper = styled.div`
   .radio-wrapper {
     position: relative;
     height: 38px;
-    width: 84px;
+    width: 86px;
     margin: 3px;
   }
 
@@ -60,7 +102,7 @@ const StyledWrapper = styled.div`
     --primary: #ff184c;
     --shadow-primary: #fded00;
     --color: white;
-    --font-size: 12px;
+    --font-size: 10px;
     --shadow-primary-hue: 180;
     --shadow-secondary-hue: 60;
     --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);

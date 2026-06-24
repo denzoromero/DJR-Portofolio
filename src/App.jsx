@@ -2,6 +2,7 @@
 import NavBar from "../components/NavBar"
 
 import HomeSection from "../sections/HomeSection"
+import AboutSection from "../sections/AboutSection"
 
 
 
@@ -10,23 +11,25 @@ function App() {
     <>
     
 
-    <div className="bg-surface">
-      <NavBar />
-      <main className="pt-16">
-        <HomeSection />
-        <section className="h-screen flex items-center justify-center border-2 border-red-300">
-          <h1>About Me</h1>
-        </section>
+    <NavBar />
+    <main className="h-dvh">
 
-        <section className="h-screen flex items-center justify-center border-2 border-yellow-300">
-          <h1>Projects</h1>
-        </section>
+      <HomeSection id="home" />
 
-        <section className="h-screen flex items-center justify-center border-2 border-green-300">
-          <h1>Contact Me</h1>
-        </section>
-      </main>
-    </div>
+      <AboutSection id="about" />
+
+      {/* <section id="about" className="h-screen flex items-center justify-center border-2 border-red-300">
+        <h1>About Me</h1>
+      </section> */}
+
+      <section id="projects" className="h-screen flex items-center justify-center border-2 border-yellow-300">
+        <h1>Projects</h1>
+      </section>
+
+      <section id="contact" className="h-screen flex items-center justify-center border-2 border-green-300">
+        <h1>Contact Me</h1>
+      </section>
+    </main>
 
     </>
   )

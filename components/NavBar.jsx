@@ -14,7 +14,7 @@ export default function NavBar() {
                 }}
 >
                 DJR
-                 <span className="glitch-layer">DJR</span>
+                <span className="glitch-layer">DJR</span>
             </h1>
             <div>
                 <CyberpunkRadio />

@@ -1,6 +1,59 @@
 @import "tailwindcss";
 
 
+/* html {
+  scroll-padding-top: 4rem;
+} */
+
+
+.cyberpunk {
+  text-shadow: 0 0 3px #00f0ff, 0 0 6px #00f0ff,  0 0 12px #00f0ff;
+}
+
+.cyber-outline {
+  -webkit-text-stroke: 0.5px rgba(255, 252, 63, 0.938);
+   text-shadow:
+    0 2px 2px rgba(0, 255, 255, 0.9),
+    0 4px 6px rgba(0, 255, 255, 0.6);
+}
+
+.cyber-bottom {
+  text-shadow:
+    0 2px 2px rgba(0, 255, 255, 0.9),
+    0 4px 6px rgba(0, 255, 255, 0.6);
+}
+
+
+.about-glitch {
+  position: relative;
+  display: inline-block;
+}
+
+/* glitch layers */
+.about-glitch::before,
+.about-glitch::after {
+  content: "01000001 01000010 01001111 01010101 01010100 00100000 01001101 01000101"; /* ABOUT ME in binary */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  color: black;
+  background: #fcd34d;
+  opacity: 0;
+}
+
+/* left glitch (cyan) */
+.about-glitch::before {
+  color: #00f0ff;
+  animation: glitchBinary 2s infinite;
+}
+
+/* right glitch (red) */
+.about-glitch::after {
+  color: #ff0040;
+  animation: glitchBinary 2s infinite reverse;
+}
 
 
 
@@ -27,21 +80,21 @@
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Satyr';
-  src: url('assets/fonts/satyr_SP/SatyrSP\ Basic.otf') format('opentype');
+  font-family: 'Galaxy';
+  src: url('assets/fonts/SFDistantGalaxy.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+
+
 @font-face {
-  font-family: 'Sefa';
-  src: url('assets/fonts/sefa/Sefa_OTF.otf') format('opentype');
+  font-family: 'Saiba';
+  src: url('assets/fonts/Saiba_45.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-
 
 
 
@@ -120,7 +173,7 @@
     -2px -2px var(--shadow-secondary);
 
   clip-path: var(--clip);
-  animation: glitch 2.5s infinite;
+  animation: glitch 3.5s infinite;
 
   pointer-events: none;
 
@@ -137,9 +190,10 @@
   --font-cynatar: "Cynatar", sans-serif;
   --font-goblin: "GlitchGoblin", sans-serif;
   --font-orbitron: "Orbitron", sans-serif;
+  --font-galaxy: "Galaxy", sans-serif;
 
-  --font-satyr: "Satyr", sans-serif;
-  --font-sefa: "Sefa", sans-serif;
+  --font-saiba: "Saiba", sans-serif;
+
 
     /* --animate-zoom-in: zoom-in 1s ease-in-out forwards;
     @keyframes zoom-in {
@@ -225,6 +279,35 @@
       clip-path: var(--clip-four);
     }
   }
+
+  
+@keyframes glitchBinary {
+  0% {
+    opacity: 0;
+    transform: translate(0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translate(2px, -2px);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translate(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0);
+  }
+}
+
 
 
 }
