@@ -6,10 +6,8 @@
 // import StarBackground from '../components/StarCanvas';
 
 import HomeBackground from "../components/HomeBackground";
-
 import HeroText from "../components/GlitchEffect";
-
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Socials from "../components/Socials";
 
 
 export default function HomeSection({ id }) {
@@ -31,13 +29,11 @@ export default function HomeSection({ id }) {
                     <p className="text-white text-xl">
                         I am Full-Stack Developer, Open to job opportunities worldwide.
                     </p>
-                    <div className="flex flex-row gap-4 items-center">        
-                        <FaGithub className="size-8"/>
-                        <FaLinkedin className="size-8"/>
-                        <FaInstagram className="size-8"/>
-                    </div>
+                    <Socials />
                     <div>
-                        Download Resume Button
+                        <button class="cursor-pointer uppercase text-black font-mono bg-yellow-300 font-bold py-2 px-4 rounded border-2 border-blue-400 shadow-[0.25rem_0.25rem_#00f0ff] transition-[transform_50ms, box-shadow_50ms] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0.125rem_0.125rem_#00f0ff]">
+                            Download Resume
+                        </button>
                     </div>
                 </div>
                 <div className="bg-red-100">

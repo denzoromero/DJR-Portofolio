@@ -67,7 +67,7 @@ export default function AboutGlitch({ title }) {
   }, [originalText]);
 
   return (
-    <div ref={elementRef} className="flex justify-center p-4">
+    <div ref={elementRef} className="flex justify-center py-3">
       <p className="text-5xl text-red-600 tracking-widest font-galaxy cyber-outline font-bold">
         {text}
       </p>
