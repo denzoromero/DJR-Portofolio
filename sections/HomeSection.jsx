@@ -36,7 +36,7 @@ export default function HomeSection({ id }) {
                         </button>
                     </div>
                 </div>
-                <div className="bg-red-100">
+                <div className="">
                     grid 2
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 import LandscapePhoto from '../src/assets/landscape.png'
 import MoonPhoto from '../src/assets/moon.png'
+import EarthPhoto from '../src/assets/earth.png'
 
 import StarBackground from '../components/StarCanvas';
 
