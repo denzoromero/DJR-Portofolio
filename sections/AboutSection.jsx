@@ -5,8 +5,6 @@ import LabelWithLogo from '../components/LabelWithLogo';
 import Socials from '../components/Socials'
 import Experience from '../components/Experience';
 
-import { Mail, MapPin, GraduationCapIcon, University, Sparkles } from 'lucide-react';
-
 import LaptopIcon from '../src/assets/Laptop_Icon.png'
 import BrainIcon from '../src/assets/Brain_Icon.png'
 import CityIcon from '../src/assets/City_Icon.png'
@@ -18,7 +16,7 @@ import "flag-icons/css/flag-icons.min.css";
 export default function AboutSection({ id }) {
     return (
         <>
-        <section id={id} className="min-h-dvh pt-16 w-full overflow-auto flex flex-col p-4 border border-white ">
+        <section id={id} className="min-h-dvh pt-16 w-full overflow-auto flex flex-col p-4">
             <TitleHeader title="ABOUT"/>
             <div className="flex flex-col py-2 gap-5 flex-1 items-stretch mx-40">
                 <div className='flex justify-start items-start flex-row gap-6 rounded-lg'>
@@ -81,7 +79,8 @@ export default function AboutSection({ id }) {
                         </p>
                     </div>
                     <div className=''>
-                        <Experience 
+                        <Experience />
+                        {/* <Experience 
                             detail={{
                                     icon: Sparkles,
                                     jobDescription: "Full-Stack Developer",
@@ -93,8 +92,9 @@ export default function AboutSection({ id }) {
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`
                                 }}
-                        />
-                        <Experience 
+                        /> */}
+
+                        {/* <Experience 
                             detail={{
                                     icon: Sparkles,
                                     jobDescription: "Full-Stack Developer",
@@ -106,7 +106,7 @@ export default function AboutSection({ id }) {
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`
                                 }}
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>

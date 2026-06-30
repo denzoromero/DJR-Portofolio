@@ -24,7 +24,11 @@ useEffect(() => {
       });
     },
     {
-      threshold: 0.6, // adjust sensitivity
+      //threshold: 0.6, // adjust sensitivity
+      
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0
+
     }
   );
 
