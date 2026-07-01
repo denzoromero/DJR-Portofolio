@@ -2,6 +2,7 @@
 import NavBar from "../components/NavBar"
 
 import HomeSection from "../sections/HomeSection"
+import SkillsSection from "../sections/SkillsSection"
 import AboutSection from "../sections/AboutSection"
 import ProjectSection from "../sections/ProjectSection"
 
@@ -16,6 +17,12 @@ function App() {
     <main className="h-dvh">
 
       <HomeSection id="home" />
+
+      <SkillsSection id="skills" />
+
+      {/* <section id="skills" className="h-screen flex items-center justify-center">
+        <h1>Skills</h1>
+      </section> */}
 
       <AboutSection id="about" />
 

@@ -17,7 +17,7 @@ export default function AboutSection({ id }) {
     return (
         <>
         <section id={id} className="min-h-dvh pt-16 w-full overflow-auto flex flex-col p-4">
-            <TitleHeader title="ABOUT"/>
+            <TitleHeader title={id}/>
             <div className="flex flex-col py-2 gap-5 flex-1 items-stretch mx-40">
                 <div className='flex justify-start items-start flex-row gap-6 rounded-lg'>
                     <div className='w-2/5 flex flex-col gap-y-6 border border-amber-50 rounded-lg p-4'>

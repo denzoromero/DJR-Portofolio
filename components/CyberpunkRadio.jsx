@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const CyberpunkRadio = () => {
 
 const [active, setActive] = useState("home");
-const sections = ["home", "about", "projects", "contact"];
+const sections = ["home", "skills", "about", "projects", "contact"];
 
 const scrollToSection = (id) => {
   document.getElementById(id)?.scrollIntoView({
@@ -37,12 +37,23 @@ useEffect(() => {
   return () => observer.disconnect();
 }, []);
 
-
-
   return (
     <StyledWrapper>
       <div className="container">
-        <div className="radio-wrapper">
+         {sections.map((section, x) => {
+            return (
+              <div key={x} className="radio-wrapper">
+                <input type="radio" id="value-1" name="btn" className="input" checked={active === section} onChange={() => scrollToSection(section)} />
+                <div className="btn font-orbitron">
+                  <span aria-hidden>_</span>{section}
+                  <span aria-hidden className="btn__glitch">_{section}</span>
+                  <label className="number">r{x}</label>
+                </div>
+              </div>
+            );
+          })}
+
+        {/* <div className="radio-wrapper">
           <input type="radio" id="value-1" name="btn" className="input" checked={active === "home"} onChange={() => scrollToSection("home")} />
           <div className="btn font-sefa">
             <span aria-hidden>_</span>Home
@@ -73,7 +84,7 @@ useEffect(() => {
             <span aria-hidden className="btn__glitch">Contact_</span>
             <label className="number">r4</label>
           </div> 
-        </div>
+        </div> */}
       </div>
     </StyledWrapper>
   );
@@ -106,7 +117,7 @@ const StyledWrapper = styled.div`
     --primary: #ff184c;
     --shadow-primary: #fded00;
     --color: white;
-    --font-size: 10px;
+    --font-size: 7px;
     --shadow-primary-hue: 180;
     --shadow-secondary-hue: 60;
     --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
@@ -123,12 +134,12 @@ const StyledWrapper = styled.div`
     color: var(--color);
     text-transform: uppercase;
     font-size: var(--font-size);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     position: relative;
     font-weight: 900;
     width: 100%;
     height: 100%;
-    line-height: 38px;
+    line-height: 36px;
     text-align: center;
     transition: background 0.2s, 0.3s;
     z-index: 1;
@@ -141,7 +152,7 @@ const StyledWrapper = styled.div`
 
   .input:hover + .btn {
     --primary: #cc133c;
-    --font-size: 11px;
+    --font-size: 9px;
   }
 
   .btn:after, .btn:before {
