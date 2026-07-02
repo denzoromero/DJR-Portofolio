@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion";
 
 // import LandscapePhoto from '../src/assets/landscape.png'
 // import MoonPhoto from '../src/assets/moon.png'
@@ -36,9 +36,9 @@ export default function HomeSection({ id }) {
                         </button>
                     </div>
                 </div>
-                <div className="">
+                {/* <div className="">
                     grid 2
-                </div>
+                </div> */}
             </div>
 
                 {/* <StarBackground />

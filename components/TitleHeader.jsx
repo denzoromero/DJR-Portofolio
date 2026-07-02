@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-export default function AboutGlitch({ title }) {
+export default function AboutGlitch({ title, onComplete, onReset}) {
   const originalText = title;
   const [text, setText] = useState(originalText);
   const elementRef = useRef(null);
@@ -33,6 +33,7 @@ export default function AboutGlitch({ title }) {
 
         if (iterations > originalText.length) {
           clearInterval(interval);
+          onComplete?.();
         }
 
         iterations += 0.3;
@@ -43,10 +44,11 @@ export default function AboutGlitch({ title }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           // ✅ trigger every time visible
-          setTimeout(() => glitch(), 200);
+          setTimeout(() => glitch(), 100);
         } else {
           // ✅ reset when leaving screen
           setText(originalText);
+          onReset?.();
         }
       },
       {

@@ -188,7 +188,6 @@
 
 .glitch-load {
   position: relative;
-  font-size: 25px;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
@@ -413,7 +412,7 @@
 @layer components {
 
   .bg-surface {
-    @apply bg-gray-900 text-white;
+    @apply bg-gray-950 text-white;
   }
 
 }

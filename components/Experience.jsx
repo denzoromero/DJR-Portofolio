@@ -1,10 +1,12 @@
 
+import { motion } from "framer-motion";
 
 import { Building2 } from 'lucide-react';
-
 import { PiStarFill } from "react-icons/pi";
 
-export default function Experience() {
+
+
+export default function Experience({ titleFinished }) {
     // const currentYear = new Date().getFullYear();
     // const { icon: Icon, jobDescription, company, date, location, description } = detail;
 
@@ -13,7 +15,7 @@ export default function Experience() {
         jobDescription: "Full-Stack Developer",
         company: "Seatrium",
         yearTitle: "Present",
-        date: "2023-Present",
+        date: "2023 - Present",
         location: "Rio de Janeiro, BR",
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
         isActive: true
@@ -22,7 +24,7 @@ export default function Experience() {
         jobDescription: "Full-Stack Developer",
         company: "Freelance",
         yearTitle: "2022",
-        date: "2020-2022",
+        date: "2020 - 2022",
         location: "Remote",
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
         isActive: false
@@ -31,7 +33,7 @@ export default function Experience() {
         jobDescription: "Junior Developer",
         company: "Gemango Software Services Inc.",
         yearTitle: "2020",
-        date: "2019-2020",
+        date: "2019 - 2020",
         location: "Cebu City, Philippines",
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
         isActive: false
@@ -53,9 +55,23 @@ export default function Experience() {
                 return (
                     <div key={index} className='flex flex-col gap-2'>
                         <div className='flex flex-row py-2'>
-                            <div className={`w-1/4 flex justify-start relative border-l ${item.isActive ? "border-red-500" : "border-gray-400"}`}>
+                            <motion.div className={`w-1/4 flex justify-start relative  ${item.isActive ? "" : "border-l border-gray-400"}`}
+                                initial={{ x:'-100%', opacity: 0 }}
+                                // whileInView={{ x:0, opacity: 1 }}
+                                whileInView={
+                                    titleFinished
+                                    ? { x: 0, opacity: 1 }
+                                    : { x: "-100%", opacity: 0 }
+                                }
+                                viewport={{ once: false, amount: 0.2 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 100,
+                                    damping: 20,
+                                    delay: index * 0.15,
+                                }}>
                                 {item.isActive && (
-                                        <div className='absolute -translate-x-1/2 left-0 top-5'>
+                                    <div className='absolute -translate-x-1/2 left-0 top-5'>
                                         <PiStarFill className='animate-ping absolute' color='#FFEF00' size={20}/>
                                         <PiStarFill className='relative' color='#FFEF00' size={20}/>
                                     </div>
@@ -64,15 +80,27 @@ export default function Experience() {
                                     <div className='text-2xl font-orbitron tracking-widest'>
                                         {item.yearTitle}
                                     </div>
-                                    <div className='tracking-widest text-sm'>
+                                    <div className='tracking-tight text-sm'>
                                         {item.date}
                                     </div>
-                                    <div className='tracking-widest text-sm'>
+                                    <div className='tracking-tight text-sm'>
                                         {item.location}
                                     </div>
                                 </div>
-                            </div>
-                            <div className={`w-full flex flex-col gap-2 p-4 rounded-md border ${item.isActive ? "border-white text-amber-200" : "border-gray-400 text-gray-400 italic"}`}>
+                            </motion.div>
+                            <motion.div className={`w-full flex flex-col gap-2 p-4 rounded-md border ${item.isActive ? "border-white text-amber-200" : "border-gray-400 text-gray-400 italic"}`}
+                                initial={{ x:'100%', opacity: 0 }}
+                                // whileInView={{ x:0, opacity: 1 }}
+                                whileInView={
+                                    titleFinished ? { x:0, opacity: 1 } : { x:'100%', opacity: 0 }
+                                }
+                                viewport={{ once: false, amount: 0.2 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 100,
+                                    damping: 20,
+                                    delay: index * 0.15,
+                                }}>
                                 <p className='text-2xl'>
                                     <span className={`tracking-widest font-orbitron ${item.isActive && "cyberpunk"}`}>
                                         {item.jobDescription}
@@ -81,19 +109,11 @@ export default function Experience() {
                                         <Building2 color={item.isActive ? `#cd1c18` : `#99A1AF`} className='inline' size={20} /> 
                                         {item.company}
                                     </div>
-                                    <div className='flex text-sm items-center gap-3 text-yellow-300'>
-                                        <div className='flex text-sm items-center gap-2 py-2'>
-                                            {/* <Calendar color='#cd1c18' className='inline' size={20} /> {date} */}
-                                        </div>
-                                        <div className='flex text-sm items-center gap-2 py-2'>
-                                            {/* <MapPin color='#cd1c18' className='inline' size={20} /> {location} */}
-                                        </div>
-                                    </div>
                                 </p>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p> 
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 );

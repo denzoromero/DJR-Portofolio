@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const CyberpunkRadio = () => {
 
 const [active, setActive] = useState("home");
-const sections = ["home", "skills", "about", "projects", "contact"];
+const sections = ["home", "about", "experience", "projects", "skills", "contact"];
 
 const scrollToSection = (id) => {
   document.getElementById(id)?.scrollIntoView({
