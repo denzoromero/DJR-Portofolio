@@ -63,7 +63,7 @@ export default function Experience({ titleFinished }) {
                                     ? { x: 0, opacity: 1 }
                                     : { x: "-100%", opacity: 0 }
                                 }
-                                viewport={{ once: false, amount: 0.2 }}
+                                viewport={{ once: false, amount: 0.1 }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -94,7 +94,7 @@ export default function Experience({ titleFinished }) {
                                 whileInView={
                                     titleFinished ? { x:0, opacity: 1 } : { x:'100%', opacity: 0 }
                                 }
-                                viewport={{ once: false, amount: 0.2 }}
+                                viewport={{ once: false, amount: 0.1 }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,

@@ -1,10 +1,11 @@
+import { motion } from "framer-motion";
+
 
 import TitleHeader from '../components/TitleHeader'
 
 import Shopping from '../src/assets/Shopping.png'
 
 import { FaGithub } from "react-icons/fa";
-
 import { BsPinAngleFill } from 'react-icons/bs';
 
 
@@ -12,12 +13,16 @@ export default function ProjectSection({ id }) {
 
     const projects = [
     {
-        imgSrc: '',
+        imgSrc: Shopping,
         projectTitle: "ToolHub: Internal Catalog and Reservation System",
         siteLink: "",
         repoLink: "",
         techStacks: ['ASP.NET Core Web MVC', 'HTML', 'CSS', 'Javascript', 'Razor Pages', 'Bootstrap', 'Authentication & Authorization'],
-        descriptions: ['E-commerce web app powered by ASP.NET Core API.', 'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.']
+        descriptions: 
+                ['E-commerce web app powered by ASP.NET Core API.', 
+                'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.'],
+        websiteLink: "www",
+        githubLink: 'www'
     },
     {
         imgSrc: '',
@@ -25,7 +30,9 @@ export default function ProjectSection({ id }) {
         siteLink: "",
         repoLink: "",
         techStacks: ['ASP.NET Core Web API', 'EntityFramework', 'SQL Server', 'C#', 'JWT Authentication', 'Authentication & Authorization'],
-        descriptions: ['Server-rendered web application built with ASP.NET Core MVC.', 'Integrated with a RESTful API and includes secure user authentication.']
+        descriptions: ['Server-rendered web application built with ASP.NET Core MVC.', 
+            'Integrated with a RESTful API and includes secure user authentication.'],
+        githubLink: 'www'
     },
     {
         imgSrc: '',
@@ -33,7 +40,9 @@ export default function ProjectSection({ id }) {
         siteLink: "",
         repoLink: "",
         techStacks: ['ASP.NET Core Web MVC', 'HTML', 'CSS', 'Javascript', 'Razor Pages', 'Bootstrap'],
-        descriptions: ['.', 'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.']
+        descriptions: ['.',
+            'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.'],
+        githubLink: 'www'
     },
     {
         imgSrc: '',
@@ -41,7 +50,9 @@ export default function ProjectSection({ id }) {
         siteLink: "",
         repoLink: "",
         techStacks: ['ASP.NET Core Web MVC', 'HTML', 'CSS', 'Javascript', 'Razor Pages', 'Bootstrap'],
-        descriptions: ['.', 'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.']
+        descriptions: ['.',
+            'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.'],
+        githubLink: 'www'
     },
     {
         imgSrc: '',
@@ -49,19 +60,29 @@ export default function ProjectSection({ id }) {
         siteLink: "",
         repoLink: "",
         techStacks: ['ASP.NET Core Web MVC', 'HTML', 'CSS', 'Javascript', 'Razor Pages', 'Bootstrap'],
-        descriptions: ['.', 'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.']
+        descriptions: ['.', 
+            'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.'],
+        githubLink: 'www'
     }
     ];
 
 
     return (
-        <section id={id} className="min-h-dvh pt-16 w-full overflow-auto flex flex-col p-4">
+        <section id={id} className="min-h-dvh pt-16 w-full overflow-auto flex flex-col p-4 bg-black">
             <TitleHeader title={id}/>
             <div className=' flex justify-center'>
                 <div className='grid grid-cols-3 gap-y-4 gap-x-6'>
                     {projects.map((item, index) => {
                         return (
-                            <div key={index} className='w-100 h-180 bg-black rounded-lg border border-white'>
+                            <motion.div key={index} className='w-100 h-180 bg-gray-950 rounded-lg border border-white'
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true, amount: 0.1 }}
+                                transition={{
+                                    duration: 0.8,
+                                    ease: "easeOut",
+                                    delay: index * 0.2,
+                                }}>
                                 <div className='flex flex-row gap-1 justify-end px-2 py-3 items-center'>
                                     <span className='rounded-full bg-yellow-300 inline-block size-2'></span>
                                     <span className='rounded-full bg-green-300 inline-block size-2'></span>
@@ -75,10 +96,14 @@ export default function ProjectSection({ id }) {
                                         {item.projectTitle}
                                     </p>
                                     <div className='flex items-center gap-x-3 justify-end'>
-                                        <a class="border rounded-lg p-1 flex justify-center items-center after:content-['_↗']" href="...">Visit Site</a>
-                                        <button className='border rounded-lg p-1 flex justify-center items-center'> 
-                                            <FaGithub className='size-6' />
-                                        </button>
+                                        {item.websiteLink && (
+                                            <a class="border rounded-lg p-1 flex justify-center items-center after:content-['_↗']" href={item.websiteLink}>Visit Site</a>
+                                        )}
+                                        {item.githubLink && (
+                                            <button className='border rounded-lg p-1 flex justify-center items-center'> 
+                                                <FaGithub className='size-6' />
+                                            </button>
+                                        )}
                                     </div>
                                     <div className="flex flex-wrap gap-3 text-xs h-32 content-start">
                                         {item.techStacks.map((tech, i) => {
@@ -122,7 +147,7 @@ export default function ProjectSection({ id }) {
                                         </li>
                                     </ul>  */}
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
 

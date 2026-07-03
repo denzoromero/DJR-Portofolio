@@ -75,7 +75,15 @@ export default function SkillsSection ({id}){
             <div className='px-5 flex flex-wrap gap-10 justify-center items-start mt-6'>
                 {skills.map((skill, x) => {
                     return (
-                        <div key={x} className='w-64 h-120 flex flex-col gap-y-2 items-center rounded-lg py-2 border bg-black'>
+                        <motion.div key={x} className='w-64 h-120 flex flex-col gap-y-2 items-center rounded-lg py-2 border bg-black'
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: false, amount: 0.3 }}
+                            transition={{
+                                duration: 0.8,
+                                ease: "easeOut",
+                                delay: x * 0.2,
+                            }}>
                             <p data-glitch={skill.section} className='text-2xl glitch-load m-2 font-orbitron uppercase'>
                                 {skill.section}
                             </p>
@@ -100,14 +108,14 @@ export default function SkillsSection ({id}){
                                                 viewport={{ once: false }}
                                                 transition={{
                                                                 duration: 1,
-                                                                delay: y * 0.1,
+                                                                delay: y * 0.4,
                                                             }}
                                             />
                                         </div>
                                     </div> 
                                 );
                             })}
-                        </div>    
+                        </motion.div>    
                     );
                 })}
                 

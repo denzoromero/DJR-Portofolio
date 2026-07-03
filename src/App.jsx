@@ -46,7 +46,7 @@ function App() {
         <h1>Projects</h1>
       </section> */}
 
-      <section id="contact" className="h-screen flex items-center justify-center border-2 border-green-300">
+      <section id="contact" className="h-screen flex items-center justify-center bg-black">
         <h1>Contact Me</h1>
       </section>
     </main>
