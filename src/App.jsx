@@ -6,7 +6,7 @@ import SkillsSection from "../sections/SkillsSection"
 import AboutSection from "../sections/AboutSection"
 import ExperienceSection from "../sections/ExperienceSection"
 import ProjectSection from "../sections/ProjectSection"
-
+import ContactMe from "../sections/ContactMe"
 
 
 function App() {
@@ -30,6 +30,8 @@ function App() {
 
       <SkillsSection id="skills" />
 
+      <ContactMe id="contact" />
+
       {/* <section id="skills" className="h-screen flex items-center justify-center">
         <h1>Skills</h1>
       </section> */}
@@ -46,9 +48,10 @@ function App() {
         <h1>Projects</h1>
       </section> */}
 
-      <section id="contact" className="h-screen flex items-center justify-center bg-black">
+      {/* <section id="contact" className="h-screen flex items-center justify-center bg-black">
         <h1>Contact Me</h1>
-      </section>
+      </section> */}
+
     </main>
 
     </>
