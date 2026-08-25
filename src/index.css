@@ -69,13 +69,6 @@
   font-style: normal;
 }
 
-/* Glitch like font */
-@font-face {
-  font-family: 'GlitchGoblin';
-  src: url('assets/fonts/glitch_goblin/GlitchGoblin.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: 'Orbitron';
@@ -84,21 +77,7 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Galaxy';
-  src: url('assets/fonts/SFDistantGalaxy.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-
-
-@font-face {
-  font-family: 'Saiba';
-  src: url('assets/fonts/Saiba_45.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 
 
@@ -224,11 +203,7 @@
 @theme {
 
   --font-cynatar: "Cynatar", sans-serif;
-  --font-goblin: "GlitchGoblin", sans-serif;
   --font-orbitron: "Orbitron", sans-serif;
-  --font-galaxy: "Galaxy", sans-serif;
-
-  --font-saiba: "Saiba", sans-serif;
 
 
     /* --animate-zoom-in: zoom-in 1s ease-in-out forwards;
