@@ -21,16 +21,19 @@ export default function AboutSection({ id }) {
         <>
         <section id={id} className="min-h-dvh pt-16 w-full overflow-auto flex flex-col p-4 bg-black">
             <TitleHeader title={id} onComplete={() => setTitleFinished(true)} onReset={() => setTitleFinished(false)}/>
-            <div className="flex flex-col py-2 gap-5 flex-1 items-stretch mx-40">
-                <div className='flex justify-start items-start flex-row gap-8 rounded-lg'>
+            <div className="flex flex-col py-2 gap-5 flex-1 items-stretch mx-5 md:mx-40">
+                <div className='flex justify-start items-start flex-col md:flex-row gap-8 rounded-lg'>
 
-                    <motion.div className="relative w-2/5 p-1 
+                    <motion.div className="relative 
+                                w-full
+                                md:w-2/5 
+                                p-1 
                                 bg-cyan-500
                                 rounded-lg overflow-hidden"
                                 initial={{ opacity: 0 }}
-                                // whileInView={{ opacity: 1 }}
-                                whileInView={ titleFinished ? { opacity: 1 } : { opacity: 0 } }
-                                viewport={{ once: false, amount: 0.2 }}
+                                whileInView={{ opacity: 1 }}
+                                // whileInView={ titleFinished ? { opacity: 1 } : { opacity: 0 } }
+                                viewport={{ once: true, amount: 0.2 }}
                                 transition={{
                                     duration: 0.8,
                                     ease: "easeOut",
@@ -104,22 +107,49 @@ export default function AboutSection({ id }) {
 
                     <motion.div className='w-full md:w-3/5'
                         initial={{ opacity: 0 }}
-                        whileInView={ titleFinished ? { opacity: 1 } : { opacity: 0 } }
-                        viewport={{ once: false, amount: 0.2 }}
+                        whileInView={{ opacity: 1 }}
+                        // whileInView={ titleFinished ? { opacity: 1 } : { opacity: 0 } }
+                        viewport={{ once: true, amount: 0.2 }}
                         transition={{
                             duration: 0.8,
                             ease: "easeOut",
                             delay: titleFinished ? 0.8 : 0,
                         }}>
-                        <p className='text-lg md:text-xl leading-relaxed space-y-4 text-slate-300'>
+                        <p className='text-lg md:text-xl leading-relaxed space-y-2 text-slate-300'>
                             <span>
-                                Full-Stack Software Engineer specialized in C# / ASP.NET Core and React.
+                                Full-Stack Software Engineer specializing in 
+                                <span className="text-cyan-400 font-semibold">
+                                     &nbsp; C# / ASP.NET Core 
+                                </span> and 
+                                <span className="text-yellow-300 font-semibold">
+                                    &nbsp; React
+                                </span>.
                             </span>
-                            <span className='block mt-3'>
-                                I focus heavily on writing well-structured, maintainable code using Clean and Vertical Slice Architecture. 
+                            <span className='block mt-2 md:mt-3'>
+                                {/* I focus on writing well-structured, maintainable code using Clean and Vertical Slice Architecture.  */}
+                                I build scalable web applications with a 
+                                <span className="text-cyan-400 font-semibold">
+                                    &nbsp; strong focus on clean architecture,
+                                </span>
+                                <span className="text-yellow-300 font-semibold">
+                                    &nbsp; maintainable code &nbsp;
+                                </span>
+                                and long term sustainability.
                             </span>
-                            <span className='block mt-3'>
-                            Experienced in end-to-end API design, SQL database integrations, and writing thorough unit, functional, and infrastructure tests to ensure long-term stability.
+                            <span className='block mt-2 md:mt-3'>
+                                {/* Experienced in end-to-end API design, SQL database integrations, and writing thorough unit, functional, and infrastructure tests to ensure long-term stability. */}
+                                Experienced in
+                                <span className="text-cyan-400 font-semibold">
+                                    &nbsp;API design
+                                </span>,
+                                <span className="text-yellow-300 font-semibold">
+                                    &nbsp; SQL database integrations &nbsp;
+                                </span>
+                             and comprehensive testing, including
+                                <span className="text-cyan-400 font-semibold">
+                                    &nbsp; unit, integration and functional testing &nbsp;
+                                </span> 
+                                to deliver reliable and high-quality solutions.
                             </span>
                         </p>
                     </motion.div>

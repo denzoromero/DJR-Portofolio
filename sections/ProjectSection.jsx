@@ -79,8 +79,8 @@ export default function ProjectSection({ id }) {
     return (
         <section id={id} className="min-h-dvh pt-16 w-full overflow-auto flex flex-col p-4 bg-black">
             <TitleHeader title={id}/>
-            <div className=' flex justify-center'>
-                <div className='grid grid-cols-3 gap-y-4 gap-x-6'>
+            <div className='flex justify-center'>
+                <div className='grid grid-row md:grid-cols-3 gap-y-4 gap-x-6'>
                     {projects.map((item, index) => {
                         return (
                             <motion.div key={index} className='w-100 h-180 bg-gray-950 rounded-lg border border-white'

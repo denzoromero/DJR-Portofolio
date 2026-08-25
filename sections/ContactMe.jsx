@@ -11,7 +11,7 @@ export default function ContactMe ({id}){
         <section id={id} className="h-screen pt-16 w-full overflow-auto flex flex-col bg-black">
                 <TitleHeader title={id}/>
                 <div className='flex flex-col gap-4 h-full justify-center items-center'>
-                    <p className='text-3xl p-4'>
+                    <p className='text-3xl p-4 text-center'>
                         Open to new opportunities and collaborations.
                     </p>
                     <div className='flex flex-row gap-3'>

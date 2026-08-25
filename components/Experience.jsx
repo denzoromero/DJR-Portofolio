@@ -55,15 +55,16 @@ export default function Experience({ titleFinished }) {
                 return (
                     <div key={index} className='flex flex-col gap-2'>
                         <div className='flex flex-row py-2'>
-                            <motion.div className={`w-1/4 flex justify-start relative  ${item.isActive ? "" : "border-l border-gray-400"}`}
-                                initial={{ x:'-100%', opacity: 0 }}
+                            <motion.div className={`shrink-0 w-1/3 md:w-1/4 flex justify-start relative  ${item.isActive ? "" : "border-l border-gray-400"}`}
+                                initial={{ x:50, opacity: 0 }}
                                 // whileInView={{ x:0, opacity: 1 }}
-                                whileInView={
-                                    titleFinished
-                                    ? { x: 0, opacity: 1 }
-                                    : { x: "-100%", opacity: 0 }
-                                }
-                                viewport={{ once: false, amount: 0.1 }}
+                                // whileInView={
+                                //     titleFinished
+                                //     ? { x: 0, opacity: 1 }
+                                //     : { x: 50, opacity: 0 }
+                                // }
+                                whileInView={{ x:0, opacity: 1  }}
+                                viewport={{ once: true, amount: 0.1 }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -77,7 +78,7 @@ export default function Experience({ titleFinished }) {
                                     </div>
                                 )}
                                 <div className={`px-5 flex flex-col gap-y-2 py-4 ${item.isActive ? "text-red-500" : "text-gray-400 italic"}`}>
-                                    <div className='text-2xl font-orbitron tracking-widest'>
+                                    <div className='text-xl md:text-2xl font-orbitron tracking-widest'>
                                         {item.yearTitle}
                                     </div>
                                     <div className='tracking-tight text-sm'>
@@ -89,19 +90,19 @@ export default function Experience({ titleFinished }) {
                                 </div>
                             </motion.div>
                             <motion.div className={`w-full flex flex-col gap-2 p-4 rounded-md border ${item.isActive ? "border-white text-amber-200" : "border-gray-400 text-gray-400 italic"}`}
-                                initial={{ x:'100%', opacity: 0 }}
-                                // whileInView={{ x:0, opacity: 1 }}
-                                whileInView={
-                                    titleFinished ? { x:0, opacity: 1 } : { x:'100%', opacity: 0 }
-                                }
-                                viewport={{ once: false, amount: 0.1 }}
+                                initial={{ x:50, opacity: 0 }}
+                                whileInView={{ x:0, opacity: 1 }}
+                                // whileInView={
+                                //     titleFinished ? { x:0, opacity: 1 } : { x:'100%', opacity: 0 }
+                                // }
+                                viewport={{ once: true, amount: 0.1 }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
                                     damping: 20,
                                     delay: index * 0.15,
                                 }}>
-                                <p className='text-2xl'>
+                                <p className='text-xl md:text-2xl'>
                                     <span className={`tracking-widest font-orbitron ${item.isActive && "cyberpunk"}`}>
                                         {item.jobDescription}
                                     </span>

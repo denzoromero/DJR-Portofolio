@@ -12,7 +12,7 @@ export default function ExperienceSection({id}){
     return (
         <section id={id} className="min-h-dvh pt-16 w-full overflow-hidden flex flex-col p-4 bg-gray-950">
             <TitleHeader title={id} onComplete={() => setTitleFinished(true)} onReset={() => setTitleFinished(false)}/>
-            <div className='px-50'>
+            <div className=' md:px-50'>
                 <Experience titleFinished={titleFinished} />
             </div>
             
