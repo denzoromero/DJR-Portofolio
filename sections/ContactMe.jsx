@@ -23,16 +23,18 @@ export default function ContactMe ({id}){
                             <FaGithub className='size-8' />
                             GitHub
                         </a>
-                        <a className='flex flex-row gap-2 items-end' href="mailto:denzoromero@gmail.com?subject=Inquiry%20from%20Portfolio"> 
+                        <a className='flex flex-row gap-2 items-end' href="mailto:dabyjohnromero@gmail.com?subject=Inquiry%20from%20Portfolio"> 
                             <Mail className='size-8' />
                             Mail
                         </a>
                     </div>
-                    {/* <div>
-                        <button>
+                 <a 
+                        href="/Daby_Romero_Resume.pdf"
+                        download="Daby_Romero_Resume.pdf" 
+                        target="_blank"
+                        class="cursor-pointer uppercase text-black font-mono bg-yellow-300 font-bold py-2 px-4 rounded border-2 border-blue-400 shadow-[0.25rem_0.25rem_#00f0ff] transition-[transform_50ms, box-shadow_50ms] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0.125rem_0.125rem_#00f0ff]">
                             Resume
-                        </button>
-                    </div> */}
+                        </a>
                 </div>
         </section>
     );

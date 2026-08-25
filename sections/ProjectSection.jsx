@@ -80,10 +80,10 @@ export default function ProjectSection({ id }) {
         <section id={id} className="min-h-dvh pt-16 w-full overflow-auto flex flex-col p-4 bg-black">
             <TitleHeader title={id}/>
             <div className='flex justify-center'>
-                <div className='grid grid-row md:grid-cols-3 gap-y-4 gap-x-6'>
+                <div className='grid grid-row md:grid-cols-3 gap-y-4 gap-x-6 mx-5'>
                     {projects.map((item, index) => {
                         return (
-                            <motion.div key={index} className='w-100 h-180 bg-gray-950 rounded-lg border border-white'
+                            <motion.div key={index} className='w-full h-180 bg-gray-950 rounded-lg border border-white'
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: true, amount: 0.1 }}
@@ -106,7 +106,7 @@ export default function ProjectSection({ id }) {
                                     </p>
                                     <div className='flex items-center gap-x-3 justify-end'>
                                         {item.websiteLink && (
-                                            <a class="border rounded-lg p-1 flex justify-center items-center after:content-['_↗']" href={item.websiteLink}>Visit Site</a>
+                                            <a class="border rounded-lg p-1 flex justify-center items-center after:content-['_↗']" target="_blank" href={item.websiteLink}>Visit Site</a>
                                         )}
                                         {item.githubLink && (
                                             <a className='border rounded-lg p-1 flex justify-center items-center'

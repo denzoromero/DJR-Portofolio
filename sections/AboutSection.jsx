@@ -70,7 +70,7 @@ export default function AboutSection({ id }) {
                                     detail={{
                                         icon: LaptopIcon,
                                         labelName: "Mail:",
-                                        labelValue: "denzoromero@gmail.com",
+                                        labelValue: "dabyjohnromero@gmail.com",
                                     }}
                                 />
 
