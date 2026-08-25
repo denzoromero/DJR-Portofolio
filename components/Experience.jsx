@@ -17,7 +17,7 @@ export default function Experience({ titleFinished }) {
         yearTitle: "Present",
         date: "2023 - Present",
         location: "Rio de Janeiro, BR",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
+        description: "Modernized legacy VB.NET systems to ASP.NET Core using Clean Architecture and established comprehensive automated testing with xUnit.",
         isActive: true
     },
     {
@@ -26,7 +26,7 @@ export default function Experience({ titleFinished }) {
         yearTitle: "2022",
         date: "2020 - 2022",
         location: "Remote",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
+        description: "Developed custom, mobile-first web applications using React and modern CSS frameworks with pixel-perfect design fidelity.",
         isActive: false
     },
     {
@@ -35,7 +35,7 @@ export default function Experience({ titleFinished }) {
         yearTitle: "2020",
         date: "2019 - 2020",
         location: "Cebu City, Philippines",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
+        description: "Assisted senior developers by investigating and fixing software bugs while maintaining clear technical documentation to guide team development workflows.",
         isActive: false
     },
     {
@@ -44,7 +44,7 @@ export default function Experience({ titleFinished }) {
         yearTitle: "2019",
         date: "2019",
         location: "Cebu City, Philippines",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
+        description: "Provided IT software support by deploying licensed applications, configuring antivirus security, and maintaining regular system updates.",
         isActive: false
     }
     ];
@@ -111,7 +111,7 @@ export default function Experience({ titleFinished }) {
                                     </div>
                                 </p>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    {item.description}
                                 </p> 
                             </motion.div>
                         </div>

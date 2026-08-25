@@ -31,9 +31,13 @@ export default function HomeSection({ id }) {
                     </p>
                     <Socials />
                     <div>
-                        <button class="cursor-pointer uppercase text-black font-mono bg-yellow-300 font-bold py-2 px-4 rounded border-2 border-blue-400 shadow-[0.25rem_0.25rem_#00f0ff] transition-[transform_50ms, box-shadow_50ms] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0.125rem_0.125rem_#00f0ff]">
+                        <a 
+                        // href="/Daby_Romero.docx"
+                        // download="Daby_Romero.docx" 
+                        target="_blank"
+                        class="cursor-pointer uppercase text-black font-mono bg-yellow-300 font-bold py-2 px-4 rounded border-2 border-blue-400 shadow-[0.25rem_0.25rem_#00f0ff] transition-[transform_50ms, box-shadow_50ms] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0.125rem_0.125rem_#00f0ff]">
                             Download Resume
-                        </button>
+                        </a>
                     </div>
                 </div>
                 {/* <div className="">

@@ -15,24 +15,24 @@ export default function ContactMe ({id}){
                         Open to new opportunities and collaborations.
                     </p>
                     <div className='flex flex-row gap-3'>
-                        <button className='flex flex-row gap-2 items-end'>
+                        <a className='flex flex-row gap-2 items-end' href="https://www.linkedin.com/in/daby-john-romero" target="_blank">
                             <FaLinkedin className='size-8' />
                             LinkedIn
-                        </button>
-                        <button className='flex flex-row gap-2 items-end'>
+                        </a>
+                        <a className='flex flex-row gap-2 items-end' href="https://github.com/denzoromero" target="_blank">
                             <FaGithub className='size-8' />
                             GitHub
-                        </button>
-                        <button className='flex flex-row gap-2 items-end'>
+                        </a>
+                        <a className='flex flex-row gap-2 items-end' href="mailto:denzoromero@gmail.com?subject=Inquiry%20from%20Portfolio"> 
                             <Mail className='size-8' />
                             Mail
-                        </button>
+                        </a>
                     </div>
-                    <div>
+                    {/* <div>
                         <button>
                             Resume
                         </button>
-                    </div>
+                    </div> */}
                 </div>
         </section>
     );

@@ -13,7 +13,7 @@ export default function ProjectSection({ id }) {
 
     const projects = [
     {
-        imgSrc: Shopping,
+        imgSrc: ``,
         projectTitle: "ToolHub: Internal Catalog and Reservation System",
         siteLink: "",
         repoLink: "",
@@ -21,18 +21,19 @@ export default function ProjectSection({ id }) {
         descriptions: 
                 ['E-commerce web app powered by ASP.NET Core API.', 
                 'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.'],
-        websiteLink: "www",
-        githubLink: 'www'
+        websiteLink: "https://seatrium.com.br/home/ferramentaria"
     },
     {
         imgSrc: '',
         projectTitle: "ToolHub API: Catalog and Reservation Services",
         siteLink: "",
         repoLink: "",
-        techStacks: ['ASP.NET Core Web API', 'EntityFramework', 'SQL Server', 'C#', 'JWT Authentication', 'Authentication & Authorization'],
-        descriptions: ['Server-rendered web application built with ASP.NET Core MVC.', 
-            'Integrated with a RESTful API and includes secure user authentication.'],
-        githubLink: 'www'
+        techStacks: ['ASP.NET Core Web API', 'EF Core', 'SQL Server', 'C#', 'JWT Security'],
+        descriptions: [
+            'A RESTful ASP.NET Core Web API managing tool catalog inventory and rental reservation workflows.',
+            'Secured with JWT (JSON Web Tokens) for stateless user authentication and authorization.',
+            'Utilizes Entity Framework Core with SQL Server for reliable data persistence and relational querying.'
+        ]
     },
     {
         imgSrc: '',
@@ -40,9 +41,12 @@ export default function ProjectSection({ id }) {
         siteLink: "",
         repoLink: "",
         techStacks: ['ASP.NET Core Web MVC', 'HTML', 'CSS', 'Javascript', 'Razor Pages', 'Bootstrap'],
-        descriptions: ['.',
-            'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.'],
-        githubLink: 'www'
+        descriptions: [
+            'ASP.NET Core Web MVC platform managing toolhouse inventory lifecycles and rental transactions.',
+            'Secured with Claims-based authentication/authorization and equipped with full audit logging for system operations.',
+            'Designed with idempotent handling on key transaction workflows to protect against accidental duplicate requests.'
+        ],
+        githubLink: 'https://github.com/denzoromero/CleanFerramentaria.git'
     },
     {
         imgSrc: '',
@@ -50,9 +54,12 @@ export default function ProjectSection({ id }) {
         siteLink: "",
         repoLink: "",
         techStacks: ['ASP.NET Core Web MVC', 'HTML', 'CSS', 'Javascript', 'Razor Pages', 'Bootstrap'],
-        descriptions: ['.',
-            'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.'],
-        githubLink: 'www'
+        descriptions: [
+            'ASP.NET Core MVC application managing invoice tracking and material allocation for operational teams.',
+            'Built custom PDF reporting logic utilizing optimized `window.print()` triggers to handle large, high-volume page renders without server bottlenecking.',
+            'Styled custom print media queries (CSS `@media print`) to ensure pixel-perfect report layouts upon export.'
+        ],
+        githubLink: 'https://github.com/denzoromero/CleanArchitecture-CadNotas.git'
     },
     {
         imgSrc: '',
@@ -60,9 +67,11 @@ export default function ProjectSection({ id }) {
         siteLink: "",
         repoLink: "",
         techStacks: ['ASP.NET Core Web MVC', 'HTML', 'CSS', 'Javascript', 'Razor Pages', 'Bootstrap'],
-        descriptions: ['.', 
-            'Includes authentication with Microsoft Authenticator (MFA) and secure API integration.'],
-        githubLink: 'www'
+        descriptions: [
+            'ASP.NET Core MVC system built to manage and balance engineering material allocations across projects.',
+            'Designed to process complex cross-examination business logic to ensure high data accuracy and prevent inventory discrepancies.',
+            'Features automated Excel spreadsheet parsing with template validation for fast data ingestion and batch processing.'
+        ]
     }
     ];
 
@@ -100,9 +109,10 @@ export default function ProjectSection({ id }) {
                                             <a class="border rounded-lg p-1 flex justify-center items-center after:content-['_↗']" href={item.websiteLink}>Visit Site</a>
                                         )}
                                         {item.githubLink && (
-                                            <button className='border rounded-lg p-1 flex justify-center items-center'> 
+                                            <a className='border rounded-lg p-1 flex justify-center items-center'
+                                            href={item.githubLink} target="_blank"> 
                                                 <FaGithub className='size-6' />
-                                            </button>
+                                            </a>
                                         )}
                                     </div>
                                     <div className="flex flex-wrap gap-3 text-xs h-32 content-start">

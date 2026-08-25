@@ -102,20 +102,25 @@ export default function AboutSection({ id }) {
                         </div>
                     </motion.div>
 
-                    <motion.div className='w-3/5'
-                            initial={{ opacity: 0 }}
-                            whileInView={ titleFinished ? { opacity: 1 } : { opacity: 0 } }
-                            viewport={{ once: false, amount: 0.2 }}
-                            transition={{
-                                duration: 0.8,
-                                ease: "easeOut",
-                                delay: titleFinished ? 0.8 : 0,
-                            }}>
-                        <p className='text-xl'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <motion.div className='w-full md:w-3/5'
+                        initial={{ opacity: 0 }}
+                        whileInView={ titleFinished ? { opacity: 1 } : { opacity: 0 } }
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{
+                            duration: 0.8,
+                            ease: "easeOut",
+                            delay: titleFinished ? 0.8 : 0,
+                        }}>
+                        <p className='text-lg md:text-xl leading-relaxed space-y-4 text-slate-300'>
+                            <span>
+                                Full-Stack Software Engineer specialized in C# / ASP.NET Core and React.
+                            </span>
+                            <span className='block mt-3'>
+                                I focus heavily on writing well-structured, maintainable code using Clean and Vertical Slice Architecture. 
+                            </span>
+                            <span className='block mt-3'>
+                            Experienced in end-to-end API design, SQL database integrations, and writing thorough unit, functional, and infrastructure tests to ensure long-term stability.
+                            </span>
                         </p>
                     </motion.div>
                 </div>
