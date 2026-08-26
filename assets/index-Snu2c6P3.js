@@ -226,7 +226,7 @@ Error generating stack: `+e.message+`
     top: 0;
     left: 81%;
     line-height: 6.2px;
-  }`;function rr(){let[e,t]=(0,b.useState)(!1);return(0,N.jsxs)(`div`,{className:`fixed top-0 w-full bg-gray-800 z-50`,children:[(0,N.jsxs)(`div`,{className:`h-16 flex justify-between items-center px-4 md:px-12`,children:[(0,N.jsxs)(`h1`,{className:`text-yellow-300 text-3xl md:text-5xl tracking-widest font-cynatar glitch`,"data-text":`DJR`,style:{textShadow:`
+  }`;function rr(){let[e,t]=(0,b.useState)(!1);return(0,N.jsxs)(`div`,{className:`fixed top-0 w-full bg-gray-800 z-50`,children:[(0,N.jsxs)(`div`,{className:`h-16 flex justify-between items-center px-4 md:px-12`,children:[(0,N.jsxs)(`h1`,{className:`text-yellow-300 text-3xl md:text-5xl tracking-widest font-sefa glitch`,"data-text":`DJR`,style:{textShadow:`
                         0 0 3px #00f0ff,
                         0 0 6px #00f0ff,
                         0 0 12px #00f0ff
