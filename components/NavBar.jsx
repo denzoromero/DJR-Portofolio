@@ -10,7 +10,7 @@ export default function NavBar() {
         <div className="fixed top-0 w-full bg-gray-800 z-50">
             <div className="h-16 flex justify-between items-center px-4 md:px-12">
                 <h1
-                    className="text-yellow-300 text-3xl md:text-5xl tracking-widest font-cynatar glitch"
+                    className="text-yellow-300 text-3xl md:text-5xl tracking-widest font-sefa glitch"
                     data-text="DJR"
                     style={{
                         textShadow: `

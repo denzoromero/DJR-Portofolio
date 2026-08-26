@@ -61,14 +61,12 @@
 
 
 
-/* Cyberpunk like font */
 @font-face {
-  font-family: 'Cynatar';
-  src: url('assets/fonts/Cynatar.otf') format('opentype');
+  font-family: 'Sefa';
+  src: url('assets/fonts/Sefa.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-
 
 @font-face {
   font-family: 'Orbitron';
@@ -201,8 +199,8 @@
 
 
 @theme {
-
-  --font-cynatar: "Cynatar", sans-serif;
+  
+  --font-sefa: "Sefa", sans-serif;
   --font-orbitron: "Orbitron", sans-serif;
 
 
